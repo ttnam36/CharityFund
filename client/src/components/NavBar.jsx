@@ -23,7 +23,7 @@ const NavBar = () => {
           className="flex w-full font-epilogue font-normal text-[14px] placeholder:text-[#4b5264] text-white bg-transparent outline-none"
         />
 
-        <div className="w-[72px] h-full rounded-[20px] bg-[#4acd8d] flex justify-center items-center cursor-pointer">
+        <div className="w-[72px] h-full rounded-[20px] bg-gradient-primary flex justify-center items-center cursor-pointer">
           <img
             src={search}
             alt="search"
@@ -36,7 +36,7 @@ const NavBar = () => {
         <CustomButton
           btnType={"button"}
           title={address ? "Create a campaign" : "Connect wallet"}
-          styles={address ? "bg-[#1dc071]" : "bg-[#8c6dfd]"}
+          styles={address ? "bg-gradient-primary" : "bg-[#8c6dfd]"}
           handleClick={() => {
             if (address) navigate("create-campaign");
             else connect();

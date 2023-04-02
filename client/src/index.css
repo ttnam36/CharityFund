@@ -16,3 +16,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   filter: invert(0.8);
 }
+
+.bg-gradient-primary {
+  background: linear-gradient(
+    135deg,
+    hsla(151, 74%, 43%, 1) 13%,
+    hsla(294, 100%, 55%, 1) 99%
+  );
+}

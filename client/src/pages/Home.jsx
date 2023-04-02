@@ -26,7 +26,7 @@ const Home = () => {
       <DisplayCampaigns
         title="All Campaigns"
         isLoading={isLoading}
-        campaigns={campaigns}
+        campaigns={campaigns.reverse()}
       />
     </>
   );

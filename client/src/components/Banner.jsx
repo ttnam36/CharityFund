@@ -14,15 +14,15 @@ const Banner = () => {
       <div className="hidden xl:flex items-center mb-9 w-full h-[260px] bg-banner bg-cover rounded-[10px] relative before:content-[''] before:absolute before:w-full before:h-full before:z-10 before:opacity-30 before:bg-black">
         {/* <img src={banner} alt="" /> */}
         <div className="py-6 pl-[80px] w-1/3">
-          <div className="font-epilogue text-white text-[39px] relative z-20 font-semibold mb-5 leading-[48px]">
+          <div className="font-epilogue text-white text-[36px] relative z-20 font-semibold mb-5 leading-[45px]">
             <h2>Create Your</h2>
-            <h2>Own Campaign</h2>
+            <h2>Charity Campaign</h2>
           </div>
 
           <CustomButton
             btnType="button"
             title={"Create a campaign"}
-            styles={"bg-[#1dc071] relative z-20"}
+            styles={"bg-gradient-primary relative z-20"}
             handleClick={() => {
               if (address) navigate("create-campaign");
               else connect();
