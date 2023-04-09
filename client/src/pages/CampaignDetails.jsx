@@ -5,7 +5,7 @@ import { ethers } from "ethers";
 import { useStateContext } from "../context";
 import { CountBox, CustomButton, Loader } from "../components";
 import { calculateBarPercentage, daysLeft } from "../utils";
-import { thirdweb } from "../assets";
+import { avatar, thirdweb } from "../assets";
 
 const CampaignDetails = () => {
   const { state } = useLocation();
@@ -37,7 +37,6 @@ const CampaignDetails = () => {
     navigate("/");
     setIsLoading(false);
   };
-
   return (
     <div>
       {isLoading && <Loader />}
@@ -49,9 +48,9 @@ const CampaignDetails = () => {
             alt="campaign"
             className="w-full h-[410px] object-cover rounded-xl"
           />
-          <div className="relative w-full h-[5px] bg-[#3a3a43] mt-3 rounded-[5px]">
+          <div className="relative w-full h-[6px] bg-[#3a3a43] mt-3 rounded-[5px]">
             <div
-              className="absolute h-full bg-[#4acd8d]"
+              className="absolute h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-[5px]"
               style={{
                 width: `${calculateBarPercentage(
                   state.target,
@@ -60,6 +59,12 @@ const CampaignDetails = () => {
                 maxWidth: "100%",
               }}
             ></div>
+            <div className="hidden md:block pt-5 font-epilogue text-white text-[20px]">{`${
+              state.amountCollected
+            } / ${state.target} MATIC ( ${calculateBarPercentage(
+              state.target,
+              state.amountCollected
+            )}% )`}</div>
           </div>
         </div>
 
@@ -73,7 +78,7 @@ const CampaignDetails = () => {
         </div>
       </div>
 
-      <div className="mt-[60px] flex lg:flex-row flex-col gap-5">
+      <div className="mt-[90px] flex lg:flex-row flex-col gap-5">
         <div className="flex-[2] flex flex-col gap-[40px]">
           <div>
             <h4 className="font-epilogue font-semibold text-[18px] text-white uppercase">
@@ -82,9 +87,9 @@ const CampaignDetails = () => {
             <div className="mt-[20px] flex flex-row items-center flex-wrap gap-[14px]">
               <div className="w-[52px] h-[52px] flex items-center justify-center rounded-full bg-[#2c2f32] cursor-pointer">
                 <img
-                  src={thirdweb}
+                  src={avatar}
                   alt="user"
-                  className="w-[60%] h-[60%] object-contain"
+                  className="w-full h-full object-cover rounded-full"
                 />
               </div>
               <div>

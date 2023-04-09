@@ -19,6 +19,7 @@ import banner1 from "./banner1.jpg";
 import banner2 from "./banner2.jpeg";
 import banner3 from "./banner3.jpg";
 import giveLove from "./give-love.png";
+import avatar from "./avatar.png";
 
 export {
   tagType,
@@ -42,4 +43,5 @@ export {
   banner2,
   banner3,
   giveLove,
+  avatar,
 };

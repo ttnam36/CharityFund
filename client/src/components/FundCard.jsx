@@ -1,6 +1,6 @@
 import React from "react";
 
-import { matic, tagType, thirdweb } from "../assets";
+import { avatar, matic, tagType, thirdweb } from "../assets";
 import { daysLeft } from "../utils";
 
 const FundCard = (data) => {
@@ -61,9 +61,9 @@ const FundCard = (data) => {
         <div className="flex items-center mt-[20px] gap-[4px]">
           <div className="w-[30px] h-[30px] rounded-full flex justify-center items-center bg-[#13131a]">
             <img
-              src={thirdweb}
+              src={avatar}
               alt="user"
-              className="w-1/2 h-1/2 object-contain"
+              className="object-cover rounded-full"
             />
           </div>
           <p className="flex-1 font-epilogue font-normal text-[12px] text-[#808191] truncate">
